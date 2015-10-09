@@ -10,22 +10,21 @@
         #status{
             margin-top:50px;
             text-align: center;
-            font-size:150px;
+            font-size:100px;
         }
     </style>
     <script src="/socket.io/socket.io.js"></script>
     <script>
         window.onload = function() {
- 
             var messages = [];
             var socket = io() //.connect('http://192.168.1.114');
             var status = document.getElementById("status");
  
             socket.on('button', function (data) {
                 console.log(data);
-                if(data) {
-                    status.innerHTML = data;
-                }
+                //if(data) {
+                    status.innerHTML = data.toString();
+                //}
             });
         }
     </script>
