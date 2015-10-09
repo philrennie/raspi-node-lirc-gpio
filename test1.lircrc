@@ -1,0 +1,14 @@
+begin
+    button = KEY_A
+    prog = testone
+    config = key_a
+    repeat = 3
+    delay = 3
+end
+begin
+    button = KEY_B
+    prog = testone
+    config = key_b
+    repeat = 6
+    delay=6
+end

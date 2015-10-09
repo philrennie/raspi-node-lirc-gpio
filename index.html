@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #555555;
+            color: #fff;
+            font-family: Arial,Helvetica,sans-serif;
+        }
+        #status{
+            margin-top:50px;
+            text-align: center;
+            font-size:150px;
+        }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        window.onload = function() {
+ 
+            var messages = [];
+            var socket = io() //.connect('http://192.168.1.114');
+            var status = document.getElementById("status");
+ 
+            socket.on('button', function (data) {
+                console.log(data);
+                if(data) {
+                    status.innerHTML = data;
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="status">?</div>
+</body>
+</html>
